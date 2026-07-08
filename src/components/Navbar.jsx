@@ -36,14 +36,15 @@ export default function Navbar() {
         }`}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <motion.img
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           onClick={() => scrollToSection("home")}
-          className="h-9 cursor-pointer"
-          src="/assets/logo.svg"
-          alt="Logo"
-        />
+          className="flex items-center gap-x-2 cursor-pointer select-none"
+        >
+          <span className="bg-black text-white px-2 py-0.5 text-sm lg:text-base font-black rounded tracking-tighter">RR</span>
+          <span className="font-extrabold text-black text-lg lg:text-xl tracking-tight">Rahul</span>
+        </motion.div>
 
         <ul className="hidden lg:flex items-center gap-x-7 font-semibold">
           {["about", "skills", "projects", "contact"].map((section) => (
